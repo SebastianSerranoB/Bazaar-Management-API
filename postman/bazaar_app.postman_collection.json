@@ -1,0 +1,876 @@
+{
+	"info": {
+		"_postman_id": "5bb202f2-6a71-4975-869f-634d1398f82b",
+		"name": "bazaar_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34150638"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"steel knife\",\r\n    \"brand\": \"LOVELY COOK\",\r\n    \"category\": \"KITCHEN\",\r\n    \"salePrice\": 19,\r\n    \"stock\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/product/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/product/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/product/findOne/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"findOne",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"wood fork\",\r\n    \"brand\": \"Kitchen ready\",\r\n    \"stock\": 124,\r\n    \"salePrice\": 8,\r\n    \"status\": \"ACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/product/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/product/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer/findById/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"findById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jimmy\",\r\n    \"surname\": \"Page\",\r\n    \"email\": \"Zeppelin@gmail.com\",\r\n    \"gender\": \"male\",\r\n    \"phone\": \"01153367899\",\r\n    \"address\": \"London\",\r\n    \"nationalId\": \"984355652\",\r\n    \"birthDate\": \"1942-09-22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/customer/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Miles\",\r\n    \"surname\": \"Davis\",\r\n    \"gender\": \"male\",\r\n    \"birthDate\": \"1926-05-26\",\r\n    \"nationalId\": \"14289988\",\r\n    \"email\": \"jazzMeansBlack@gmail.com\",\r\n    \"phone\": \"2920252341\",\r\n    \"address\": \"New York\",\r\n    \"status\": \"ACTIVE\"\r\n\r\n}\r\n  ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/customer/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/supplier/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplier",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/supplier/findOne/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplier",
+								"findOne",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"businessName\": \"ABC Wholesale\",\r\n    \"contact\": \"555-1234\",\r\n    \"location\": \"123 Market Street, Springfield\"\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/supplier/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplier",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/supplier/delete/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplier",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"status\": \"ACTIVE\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/supplier/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplier",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sale",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paymentMethod\": \"PAYPAL\",\r\n    \"customerId\": 152,\r\n    \"saleDetails\": [{\r\n        \"productId\": 3,\r\n        \"productQuantity\": 10\r\n    },{\r\n        \"productId\":  2,\r\n        \"productQuantity\": 1\r\n    }]\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/sale/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"paymentMethod\": \"DEBIT_CARD\",\r\n    \"status\": \"CANCELED\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/sale/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/sale/findById/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								"findById",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/sale/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/sale/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SupplyOrder",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/supplyOrder/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplyOrder",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/supplyOrder/findById/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplyOrder",
+								"findById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteByid",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/supplyOrder/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplyOrder",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"supplierId\": 1,\r\n    \"paymentMethod\": \"CREDIT_CARD\",\r\n    \"orderDetails\": [{\r\n        \"productId\": 1,\r\n        \"unitPrice\": 10,\r\n        \"quantity\": 30\r\n    }]\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/supplyOrder/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplyOrder",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"status\": \"COMPLETED\",\r\n    \"paymentMethod\": \"CASH\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/supplyOrder/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supplyOrder",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Analytics",
+			"item": [
+				{
+					"name": "productMostSold",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/analytics/mostSoldProduct?startDate=2024-11-15&endDate=2024-12-30",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"analytics",
+								"mostSoldProduct"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-11-15"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-12-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "productsLeastSold",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/analytics/leastSoldProduct?startDate=2024-11-15&endDate=2024-12-30",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"analytics",
+								"leastSoldProduct"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-11-15"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-12-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "totalRevenue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/analytics/totalRevenue?startDate=2024-11-15&endDate=2024-12-30",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"analytics",
+								"totalRevenue"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-11-15"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-12-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "topCustomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/analytics/topCustomer?startDate=2024-11-15&endDate=2024-12-30",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"analytics",
+								"topCustomer"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-11-15"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-12-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "categoryMostSold",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/analytics/mostSoldCategory?startDate=2024-11-15&endDate=2024-12-30",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"analytics",
+								"mostSoldCategory"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-11-15"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-12-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mostUsedPaymentMethod",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/analytics/mostUsedPaymentMethod?startDate=2024-11-15&endDate=2024-12-30",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"analytics",
+								"mostUsedPaymentMethod"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-11-15"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-12-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "averageSaleValue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/analytics/averageSaleValue?startDate=2024-11-15&endDate=2024-12-30",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"analytics",
+								"averageSaleValue"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-11-15"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-12-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "salesTrend",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/analytics/salesTrend?startDate=2024-11-15&endDate=2024-12-30",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"analytics",
+								"salesTrend"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-11-15"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-12-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "topProviders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/analytics/topProvider?startDate=2024-11-15&endDate=2024-12-30",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"analytics",
+								"topProvider"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-11-15"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-12-30"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
